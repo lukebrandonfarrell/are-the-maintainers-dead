@@ -28,6 +28,7 @@ read:gpg_key
 <!-- toc -->
 * [Install](#install)
 * [Usage](#usage)
+* [Scoring](#scoring)
 <!-- tocstop -->
 # Install
 <!-- install -->
@@ -39,14 +40,36 @@ $ npm install -g are-the-maintainers-dead
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g are-the-maintainers-dead
-$ are-the-maintainers-dead COMMAND
-running command...
-$ are-the-maintainers-dead (-v|--version|version)
-are-the-maintainers-dead/0.0.1 darwin-x64 node-v14.15.4
-$ are-the-maintainers-dead --help [COMMAND]
-USAGE
-  $ are-the-maintainers-dead COMMAND
+$ are-the-maintainers-dead [ORGNAME] [REPONAME] -k [YOUR GITHUB ACCESS KEY]
+e.g. are-the-maintainers-dead facebook react-native -k 012abcd34567e8910fg123h45i6j7k89lm1n0opq
+
+$ are-the-maintainers-dead --help
 ...
 ```
 <!-- usagestop -->
+
+# Scoring
+<!-- scoring -->
+The score is generated based on these factors: 
+- Open Stale PRs/ Open PRs
+- Open Stale issues/ Open issues
+- Active contributors/ Contributors (Commits within the past 3 months)
+- Organisation score (isVerified, stale PRs/ issues)
+- npms scores (quality & maintenance)
+
+
+|      Factors     |   Stale PRs   | Stale Issues |    Active Contributors   | Organisation Score |      npms       |
+|:----------------:|:-------------:|:------------:|:------------------------:|:------------------:|:---------------:|
+| % of total score |      15%      |      15%     |            15%           |    isVerified 5%   |   quality 15%   |
+|                  |               |              |                          |    Stale PRs 10%   | maintenance 15% |
+|                  |               |              |                          |  Stale Issues 10%  |                 |
+|                  |               |              |                          |                    |                 |
+|       Score      | % of StalePRs |  % of Issues | % of active contributors |                    |                 |
+|         0        |      > 10     |     > 10     |             0            |                    |                 |
+|         2        |     8 - 10    |    8 - 10    |           0 - 5          |                    |                 |
+|         4        |     6 - 8     |     6 - 8    |          5 - 10          |                    |                 |
+|         6        |     4 - 6     |     4 - 6    |         10 - 15          |                    |                 |
+|         8        |      2- 4     |     2- 4     |          15 - 20         |                    |                 |
+|        10        |      < 2      |      < 2     |           > 20           |                    |                 |
+<!-- scoringstop -->
+
