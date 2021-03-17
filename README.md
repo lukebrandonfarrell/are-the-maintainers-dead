@@ -26,17 +26,23 @@ read:gpg_key
 ```
 
 <!-- toc -->
+* [Install](#install)
 * [Usage](#usage)
 <!-- tocstop -->
+# Install
+<!-- install -->
+```sh-session
+$ npm install -g are-the-maintainers-dead
+```
+<!-- installstop -->
+
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g are-the-maintainers-dead
-$ are-the-maintainers-dead [ORGNAME] [REPONAME]
-Looking for the repository...
+$ are-the-maintainers-dead [ORGNAME] [REPONAME] -k [YOUR GITHUB ACCESS KEY]
+e.g. are-the-maintainers-dead facebook react-native -k 012abcd34567e8910fg123h45i6j7k89lm1n0opq
+
 $ are-the-maintainers-dead --help
-USAGE
-  $ are-the-maintainers-dead [ORGNAME] [REPONAME] -k [GITHUB ACCESS KEY]
 ...
 ```
 <!-- usagestop -->
