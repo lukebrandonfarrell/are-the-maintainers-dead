@@ -1,10 +1,10 @@
 {
   "name": "are-the-maintainers-dead",
   "description": "CLI tool that generates a score for an open-source repository based on various factors such as issues, stale issues and dependencies etc.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Denise @Denise-Ng",
   "bin": {
-    "are-the-maintainers-dead": "./bin/run"
+    "are-the-maintainers-dead": "bin/run"
   },
   "bugs": "https://github.com/aspect-apps/are-the-maintainers-dead/issues",
   "devDependencies": {

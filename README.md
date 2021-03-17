@@ -39,11 +39,14 @@ $ npm install -g are-the-maintainers-dead
 # Usage
 <!-- usage -->
 ```sh-session
-$ are-the-maintainers-dead [ORGNAME] [REPONAME] -k [YOUR GITHUB ACCESS KEY]
-e.g. are-the-maintainers-dead facebook react-native -k 012abcd34567e8910fg123h45i6j7k89lm1n0opq
-
-$ are-the-maintainers-dead --help
+$ npm install -g are-the-maintainers-dead
+$ are-the-maintainers-dead COMMAND
+running command...
+$ are-the-maintainers-dead (-v|--version|version)
+are-the-maintainers-dead/0.0.1 darwin-x64 node-v14.15.4
+$ are-the-maintainers-dead --help [COMMAND]
+USAGE
+  $ are-the-maintainers-dead COMMAND
 ...
 ```
 <!-- usagestop -->
-
