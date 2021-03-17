@@ -1,0 +1,57 @@
+{
+  "name": "are-the-maintainers-dead",
+  "description": "CLI tool that generates a score for an open-source repository based on various factors such as issues, stale issues and dependencies etc.",
+  "version": "0.0.0",
+  "author": "Denise @Denise-Ng",
+  "bin": {
+    "are-the-maintainers-dead": "./bin/run"
+  },
+  "bugs": "https://github.com/aspect-apps/are-the-maintainers-dead/issues",
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "@types/fs-extra": "^9.0.8",
+    "@types/node": "^10.17.55",
+    "@types/node-emoji": "^1.8.1",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.9"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/aspect-apps/are-the-maintainers-dead",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "are-the-maintainers-dead"
+  },
+  "repository": "aspect-apps/are-the-maintainers-dead",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.2",
+    "@octokit/graphql": "^4.6.1",
+    "axios": "^0.21.1",
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.1.0",
+    "node-emoji": "^1.10.0",
+    "tslib": "^1.14.1"
+  }
+}
