@@ -8,6 +8,8 @@
   },
   "bugs": "https://github.com/aspect-apps/are-the-maintainers-dead/issues",
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@oclif/dev-cli": "^1.26.0",
     "@types/fs-extra": "^9.0.8",
     "@types/node": "^14.14.7",
@@ -16,6 +18,11 @@
     "eslint-config-oclif": "^3.1.0",
     "eslint-config-oclif-typescript": "^0.1.0",
     "globby": "^10.0.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "pinst": "^2.1.6",
+    "prettier": "^2.3.1",
+    "semantic-release": "^17.4.3",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.9"
   },
@@ -40,7 +47,11 @@
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
     "test": "echo NO TESTS",
-    "version": "oclif-dev readme && git add README.md"
+    "version": "oclif-dev readme && git add README.md",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "pre-commit": "lint-staged",
+    "postinstall": "husky install"
   },
   "types": "lib/index.d.ts",
   "dependencies": {
